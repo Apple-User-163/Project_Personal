@@ -6,5 +6,6 @@ public class Project_1
         Scanner inpt = new Scanner(System.in);
         System.out.println("Enter the number");
         int num = inpt.nextInt();
+
     }
 }
