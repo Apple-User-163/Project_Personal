@@ -7,13 +7,29 @@ public class Project_1
         System.out.println("Enter the number");
         int num = inpt.nextInt();
 
-        int digit = 0;
+        int digit;
         int temp = num;
+        long prt;
+        long sum = 0;
 
-        for (int i = 0; i < 3; i++)
+        while (temp != 0)
         {
             digit = temp % 10;
-            temp = temp / 10;
+            temp /= 10;
+            prt = 1;
+            for (int j = 1; j <= digit; j++)
+            {
+                prt *= j;
+            }
+            sum += prt;
+        }
+        if (sum == num)
+        {
+            System.out.println("The number is a special number");
+        }
+        else
+        {
+            System.out.println("The number is not a special number");
         }
     }
 }
