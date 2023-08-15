@@ -14,7 +14,6 @@ public class Project_1
         {
             digit = temp % 10;
             temp = temp / 10;
-            System.out.println(digit);
         }
     }
 }
