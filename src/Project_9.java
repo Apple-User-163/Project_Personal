@@ -1,4 +1,4 @@
-public class Project_9_INC
+public class Project_9
 {
     public static void main(String[] args)
     {
@@ -7,6 +7,7 @@ public class Project_9_INC
         int strt = 1;
         int count = 0;
         int i = 3;
+        int add = 75;
         boolean flag;
 
 
@@ -49,25 +50,42 @@ public class Project_9_INC
             if (count < 9)
             {
                 System.out.print(strt + ", ");
-                strt += j;
-                count ++;
             }
             else
             {
                 System.out.println(strt);
-                strt += j;
-                count ++;
             }
+            strt += j;
+            count ++;
         }
 
 
         // Series 3
-        count = 0;
-        strt = 1;
         System.out.println("\nSeries 3");
         for (int j = 1; j <= 10; j++)
         {
+            if (j <= 9)
+                System.out.print(Math.pow(j, 3) - 1 + ", ");
+            else
+                System.out.println(Math.pow(j, 3) - 1);
+        }
 
+
+        // Series 4
+        strt = 24;
+        System.out.println("\nSeries 4");
+        for (int j = 1; j <= 10; j++)
+        {
+            if (j <= 9)
+            {
+                System.out.print(strt + ", ");
+            }
+            else
+            {
+                System.out.print(strt);
+            }
+            strt += add;
+            add += 50;
         }
     }
 }
