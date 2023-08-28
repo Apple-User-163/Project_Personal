@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Project_17_INC
+public class ElectricBill_INC
 {
     String n;
     int units;
@@ -34,7 +34,7 @@ public class Project_17_INC
     }
     public static void main(String[] args)
     {
-        Project_17_INC obj = new Project_17_INC();
+        ElectricBill_INC obj = new ElectricBill_INC();
         obj.accept();
         obj.calculate();
         obj.print();
