@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ElectricBill_INC
+public class ElectricBill_DBT
 {
     String n;
     int units;
@@ -18,10 +18,10 @@ public class ElectricBill_INC
         if (units <= 100)
             bill = units * 2.00;
         else if (units <= 300)
-            bill = 100 * 2.00 + (units - 100) * 3.00;
+            bill = (100 * 2.00) + ((units - 100) * 3.00);
         else if (units <= 600)
         {
-            bill = 100 * 2.00 + 200 * 3.00 + (units - 300) * 5.00;
+            bill = (100 * 2.00) + (200 * 3.00) + ((units - 300) * 5.00);
             bill += bill * 2.5 / 100;
         }
 
@@ -34,7 +34,7 @@ public class ElectricBill_INC
     }
     public static void main(String[] args)
     {
-        ElectricBill_INC obj = new ElectricBill_INC();
+        ElectricBill_DBT obj = new ElectricBill_DBT();
         obj.accept();
         obj.calculate();
         obj.print();
