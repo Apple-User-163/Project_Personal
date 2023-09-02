@@ -64,10 +64,13 @@ public class Project_9
         System.out.println("\nSeries 3");
         for (int j = 1; j <= 10; j++)
         {
+            double val = Math.pow(j, 3) - 1;
+            String valStr = String.valueOf(val);
+            valStr = valStr.replace(".0", "");
             if (j <= 9)
-                System.out.print(Math.pow(j, 3) - 1 + ", ");
+                System.out.print(valStr + ", ");
             else
-                System.out.println(Math.pow(j, 3) - 1);
+                System.out.println(valStr);
         }
 
 

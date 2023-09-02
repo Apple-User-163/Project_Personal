@@ -10,10 +10,9 @@ public class Project_21
 
         for (int i = 0; i < n; i++)
         {
-            if (prev == n - 1)
+            if (i == n - 1)
             {
-                System.out.print(prev);
-                break;
+                System.out.print(prev + "\n");
             }
             else
             {
@@ -24,7 +23,6 @@ public class Project_21
             prev = curr;
             curr = temp + curr;
         }
-        System.out.println();
     }
 
     void generate (int i, int upper)
