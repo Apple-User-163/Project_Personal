@@ -5,12 +5,12 @@ public class Project_25_DBT
     public static void main(String[] args)
     {
         Scanner inpt = new Scanner(System.in);
-        int[] Rl_n = new int[50];
-        int[] S_A = new int[50];
-        int[] S_B = new int[50];
-        int[] S_C = new int[50];
+        int[] Rl_n = new int[3];
+        int[] S_A = new int[3];
+        int[] S_B = new int[3];
+        int[] S_C = new int[3];
 
-        int sum;
+        int average;
         System.out.println("Enter the roll numbers of the students: ");
         for (int i = 0; i < Rl_n.length; i++)
         {
@@ -31,36 +31,40 @@ public class Project_25_DBT
         {
             S_C[i] = inpt.nextInt();
         }
-        System.out.println("Enter the roll number of the student for which you want to find the average of all subjects: ");
-        int roll = inpt.nextInt();
+
         for (int i = 0; i < Rl_n.length; i++)
         {
-            if (Rl_n[i] == roll)
+            average = (S_A[i] + S_B[i] + S_C[i]) / 3;
+            System.out.println("The average of student " + Rl_n[i] + " is " + average);
+        }
+
+        for (int i = 0; i < Rl_n.length; i++)
+        {
+            if (S_A[i] > 80 && S_B[i] > 80 && S_C[i] > 80)
             {
-                sum = S_A[i] + S_B[i] + S_C[i];
-                System.out.println("Average of all subjects = " + (sum/3));
+                System.out.println("\nThe roll number and average marks of students whose marks is above 80: ");
+                System.out.println("Roll No.\tAverage");
+                average = (S_A[i] + S_B[i] + S_C[i]) / 3;
+                System.out.println(Rl_n[i] + "\t" + average);
+            }
+            else
+            {
+                System.out.println("No student has marks above 80");
             }
         }
 
-        System.out.println("The roll number of students whose average is above 80: ");
-        System.out.println("Roll No.\tAverage");
-        for (int i = 0; i < Rl_n.length; i++)
+        for (int i =0; i < Rl_n.length; i++)
         {
-            sum = (S_A[i] + S_B[i] + S_C[i]) / 3;
-            if (sum * 3 >= 240)
+            if (S_A[i] < 80 && S_B[i] < 80 && S_C[i] < 80)
             {
-                System.out.println(Rl_n[i] + "\t" + sum);
+                System.out.println("\nThe roll number and average marks of students whose marks is below 80: ");
+                System.out.println("Roll No.\tAverage");
+                average = (S_A[i] + S_B[i] + S_C[i]) / 3;
+                System.out.println(Rl_n[i] + "\t" + average);
             }
-        }
-
-        System.out.println("The roll number of students whose average is below 80: ");
-        System.out.println("Roll No.\tAverage");
-        for (int i = 0; i < Rl_n.length; i++)
-        {
-            sum = (S_A[i] + S_B[i] + S_C[i]) / 3;
-            if (sum * 3 < 240)
+            else
             {
-                System.out.println(Rl_n[i] + "\t" + sum);
+                System.out.println("No student has marks below 80");
             }
         }
     }

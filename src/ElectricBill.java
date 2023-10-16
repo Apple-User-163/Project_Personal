@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ElectricBill_DBT
+public class ElectricBill
 {
     String n;
     int units;
@@ -34,7 +34,7 @@ public class ElectricBill_DBT
     }
     public static void main(String[] args)
     {
-        ElectricBill_DBT obj = new ElectricBill_DBT();
+        ElectricBill obj = new ElectricBill();
         obj.accept();
         obj.calculate();
         obj.print();

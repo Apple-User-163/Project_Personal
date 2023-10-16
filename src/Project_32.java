@@ -4,7 +4,7 @@ public class Project_32
 {
     static String[] wonder = new String[7];
     static String[] location = new String[7];
-    public Project_32()
+    Project_32()
     {
         wonder[0] = "Taj Mahal";
         wonder[1] = "Great Wall of China";

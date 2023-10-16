@@ -62,7 +62,7 @@ public class Bill_DBT
         System.out.println("Enter the number of calls");
         int c = inpt.nextInt();
 
-        Bill_DBT obj = new Bill_DBT();
+        new Bill_DBT();
         Bill_DBT obj2 = new Bill_DBT(b, c, n);
         obj2.calculate();
         obj2.display();

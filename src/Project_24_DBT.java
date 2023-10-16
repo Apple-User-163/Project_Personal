@@ -19,21 +19,17 @@ public class Project_24_DBT {
 
         for (int i = 0; i < P.length; i++)
         {
-            for (int j = i + 1; j < P.length; j++) {
-                if (P[i] > P[j])
+            for (int j = i + 1; j < P.length; j++)
+            {
+                if (P[i] == P[j])
+                {
+                    P[j] = 0;
+                }
+                else if (P[i] > P[j])
                 {
                     int temp = P[i];
                     P[i] = P[j];
                     P[j] = temp;
-                }
-            }
-        }
-
-        for (int i = 0; i < P.length; i++)
-        {
-            for (int j = i + 1; j < P.length; j++) {
-                if (P[i] == P[j]) {
-                    P[j] = 0;
                 }
             }
         }
@@ -55,7 +51,7 @@ public class Project_24_DBT {
         {
             if (i == P.length - 1)
             {
-                System.out.print(P[i] + "\n");
+                System.out.print(P[i]);
             }
             else
             {
