@@ -5,10 +5,10 @@ public class Project_25_DBT
     public static void main(String[] args)
     {
         Scanner inpt = new Scanner(System.in);
-        int[] Rl_n = new int[3];
-        int[] S_A = new int[3];
-        int[] S_B = new int[3];
-        int[] S_C = new int[3];
+        int[] Rl_n = new int[50];
+        int[] S_A = new int[50];
+        int[] S_B = new int[50];
+        int[] S_C = new int[50];
 
         int average;
         System.out.println("Enter the roll numbers of the students: ");
