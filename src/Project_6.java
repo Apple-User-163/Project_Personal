@@ -7,22 +7,20 @@ public class Project_6
         System.out.println("Enter the number of hours worked this week");
         int hours = inpt.nextInt();
 
-        int salary;
-        int rate = 0;
+        int salary = 0;
 
         if (hours <= 48)
         {
-            rate = 1000;
+            salary = hours * 1000;
         }
         else if (hours > 48 && hours <= 56)
         {
-            rate = 1250;
+            salary = 48 * 1000 + (hours - 48) * 1250;
         }
         else if (hours > 56)
         {
-            rate = 1500;
+            salary = 48 * 1000 + 8 * 1250 + (hours - 56) * 1500;
         }
-        salary = hours * rate;
 
         System.out.println("The weekly salary is ₹ " + salary);
     }
