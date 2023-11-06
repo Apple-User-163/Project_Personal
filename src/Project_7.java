@@ -48,6 +48,7 @@ public class Project_7
                 break;
             }
             default: {
+                System.out.println("Invalid customer type");
                 System.exit(422);
             }
         }
