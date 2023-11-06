@@ -48,8 +48,7 @@ public class Project_7
                 break;
             }
             default: {
-                System.out.println("Invalid input");
-                break;
+                System.exit(422);
             }
         }
         double cost = a * discount;
