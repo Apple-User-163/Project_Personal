@@ -47,7 +47,7 @@ public class Project_11
             {
                 count ++;
                 s += i / Math.pow(x, count);
-                System.out.println(s);
+                System.out.print(s);
             }
         }
         System.out.println("The value of the second series is: " + s);
