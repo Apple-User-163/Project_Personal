@@ -17,17 +17,18 @@ public class Project_10
         long add = 0;
         long multi = 1;
         double prt;
+        long sum_num;
         switch (choice)
         {
             case 1:
                 System.out.println("The series is: ");
                 for (int i = 1; i <= n; i++)
                 {
-                    sum = sum * 10 + i;
+                    sum_num = sum_num * 10 + i;
                     if (i < n)
-                        System.out.print(sum + ", ");
+                        System.out.print(sum_num + ", ");
                     else
-                        System.out.println(sum);
+                        System.out.println(sum_num);
                 }
                 break;
             case 2:
