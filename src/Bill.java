@@ -1,19 +1,18 @@
 import java.util.Scanner;
 
-public class Bill_DBT
+public class Bill
 {
     int bno, call;
     String name;
     double amt;
-
-    Bill_DBT()
+    Bill()
     {
         bno = 0;
         call = 0;
         name = "";
         amt = 0.0;
     }
-    Bill_DBT(int b, int c, String n)
+    Bill(int b, int c, String n)
     {
         bno = b;
         call = c;
@@ -62,8 +61,8 @@ public class Bill_DBT
         System.out.println("Enter the number of calls");
         int c = inpt.nextInt();
 
-        new Bill_DBT();
-        Bill_DBT obj2 = new Bill_DBT(b, c, n);
+        new Bill();
+        Bill obj2 = new Bill(b, c, n);
         obj2.calculate();
         obj2.display();
     }

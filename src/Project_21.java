@@ -5,23 +5,23 @@ public class Project_21
     void generate (int n)
     {
         System.out.println("The Fibonacci series is: ");
-        long prev = 0;
-        long curr = 1;
+        long prev;
+        long next = 1;
+        long sum = 0;
 
-        for (int i = 0; i < n; i++)
+        while (sum <= n)
         {
-            if (i == n - 1)
+            if (sum + next > n)
             {
-                System.out.print(prev + "\n");
+                System.out.print(sum + "\n");
             }
             else
             {
-                System.out.print(prev + ", ");
+                System.out.print(sum + ", ");
             }
-
-            long temp = prev;
-            prev = curr;
-            curr = temp + curr;
+            prev = next;
+            next = sum;
+            sum = prev + next;
         }
     }
 
@@ -57,7 +57,7 @@ public class Project_21
     {
         Project_21 obj = new Project_21();
         Scanner inpt = new Scanner (System.in);
-        System.out.println("Enter the number of terms for the Fibonacci series");
+        System.out.println("Enter the limit for the Fibonacci series");
         int n = inpt.nextInt();
         System.out.println("Enter the starting range for the prime numbers");
         int a = inpt.nextInt();
